@@ -9,10 +9,11 @@ import lombok.Setter;
 //@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
+public class Employee implements Comparable<Employee> {
     String name;
     int age;
     String dept;
+
 
     public String getName() {
         return name;
@@ -45,5 +46,15 @@ public class Employee {
                 ", age=" + age +
                 ", dept='" + dept + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {//this comparable will sort based on age
+        if(this.age>o.age)
+            return -1;
+        else if(this.age<o.age)
+            return 1;
+        else
+            return 0;
     }
 }

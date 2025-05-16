@@ -12,6 +12,6 @@ public class MoveZeroElementToRight {
         Stream.concat(
                 numbers.stream().filter(n->n!=0),
                 numbers.stream().filter(n->n==0)
-        ).collect(Collectors.toList()).forEach(System.out::println);
+        ).collect(Collectors.toList()).forEach(System.out::print);
     }
 }

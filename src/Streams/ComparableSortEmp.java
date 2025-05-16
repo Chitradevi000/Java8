@@ -30,7 +30,7 @@ public class ComparableSortEmp {
             System.out.println(employee);
         }
 
-        //i am going to sort based on name but with the second character
+        //i am going to sort based on name but with the second character, means customizing comparator
         Comparator<Employee> comparator1 = new Comparator<Employee>() {
 
             @Override

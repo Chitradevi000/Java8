@@ -10,21 +10,20 @@ public class FirstUniqueCharFromStr {
     public static void main(String[] args) {
         String str="Chitra devi";
         String[] strArray =str.split(" ");
-//        List<Character> charList= str.chars().mapToObj(c->(char)c).collect(Collectors.toList());
-        List<Character> charList = Arrays.stream(strArray)
+        List<Character> charList1= str.chars().mapToObj(c->(char)c).collect(Collectors.toList()).stream().map(Character::toLowerCase).toList();
+    /*    List<Character> charList = Arrays.stream(strArray)
                 .flatMap(word -> word.chars().mapToObj(c -> (char) c))
-                .collect(Collectors.toList());
+                .collect(Collectors.toList());*/
 
-        char result= charList.stream().collect(Collectors.groupingBy(
-                a->a, LinkedHashMap::new,Collectors.counting()
-        ))
+        char result= charList1.stream()
+                .collect(Collectors.groupingBy(a->a, LinkedHashMap::new,Collectors.counting()))
                 .entrySet()
                 .stream()
                 .filter(e -> e.getValue() == 1)
                 .map(Map.Entry::getKey)
                 .toList()
                 .stream()
-                .limit(6).skip(5)
+                .limit(1)
                 .findFirst()
                 .get();
         System.out.println("This result will excludes the space "+result);

@@ -16,7 +16,7 @@ public class ConvertAllElementsToUpperCase {
         listOfnumbers.stream().reduce((a,b)->a+b).ifPresent(System.out::println);
 
         //get the max element
-
+        System.out.println("Below is the minimum element of the list");
         listOfnumbers.stream().min((a,b)->a-b).ifPresent(System.out::println);
     }
 }

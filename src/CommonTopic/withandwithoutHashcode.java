@@ -17,14 +17,7 @@ public class withandwithoutHashcode {
         person3.age=30;
 
         HashSet hashSet = new HashSet();
-        /*this hashset uses Hashcode to find the bucket and
-                the equals to compare the existing values
 
-                equals - by default it compares the reference (address) , you have to override by compare the val
-                hashcode - it creates hashcode based on the ref, override it to values
-
-                you have to override it in Person class
-                */
         hashSet.add(person);
         hashSet.add(person1);
         hashSet.add(person3);
@@ -32,3 +25,28 @@ public class withandwithoutHashcode {
         System.out.println(hashSet.size());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*this hashset uses Hashcode to find the bucket and
+                the equals to compare the existing values
+
+                equals - by default it compares the reference (address) , you have to override by compare the val
+                hashcode - it creates hashcode based on the ref, override it to values
+
+                you have to override it in Person class
+                */

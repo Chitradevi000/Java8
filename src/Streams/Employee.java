@@ -5,39 +5,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//@Getter
-//@Setter
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Employee implements Comparable<Employee> {
     String name;
     int age;
     String dept;
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getDept() {
-        return dept;
-    }
-
-    public void setDept(String dept) {
-        this.dept = dept;
-    }
+//    double salary;
 
     @Override
     public String toString() {
@@ -57,4 +36,6 @@ public class Employee implements Comparable<Employee> {
         else
             return 0;
     }
+
+
 }

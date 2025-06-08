@@ -13,5 +13,8 @@ public class ExtractDuplicatesFromIntList {
                 Function.identity(),Collectors.counting()
         )).entrySet().stream().filter(e -> e.getValue() > 1)
                 .map(e -> e.getKey()).collect(Collectors.toList()).forEach(i->System.out.println("The Duplicate elemets are   "+i));
+
+        ArrayList<Integer> listInt = new ArrayList<>(Arrays.asList(10, 10, 11));
+        listInt.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().stream().filter(e -> e.getValue() > 1).toList().forEach(i->System.out.println("The Duplicate elemets for the new list  "+i));
     }
 }
